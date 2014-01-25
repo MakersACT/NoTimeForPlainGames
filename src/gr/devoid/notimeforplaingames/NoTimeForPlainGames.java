@@ -1,11 +1,14 @@
 package gr.devoid.notimeforplaingames;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 public class NoTimeForPlainGames extends Activity {
 
+	View testView;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
