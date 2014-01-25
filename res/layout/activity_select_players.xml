@@ -1,0 +1,299 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".SelectPlayersActivity" >
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="vertical" >
+
+		<TextView
+			android:id="@+id/textView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Enter Players"
+			android:textAppearance="?android:attr/textAppearanceLarge" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:id="@+id/textView3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingRight="200dp"
+			android:text="Name"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+			android:id="@+id/textView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingRight="200dp"
+			android:text="Sex"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<TextView
+			android:id="@+id/textView4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingRight="200dp"
+			android:text="Token"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox01"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="1. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText01"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner01"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner02"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox02"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="2. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText02"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner03"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner04"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox03"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="3. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText03"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner05"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner06"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox04"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="4. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText04"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner07"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner08"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox05"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="5. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText05"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner09"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner10"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:paddingLeft="150dp" >
+
+		<CheckBox
+			android:id="@+id/CheckBox06"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="6. " />
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+
+			<EditText
+				android:id="@+id/EditText06"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:ems="10" />
+		</LinearLayout>
+
+		<Spinner
+			android:id="@+id/Spinner11"
+			android:layout_width="247dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+
+		<Spinner
+			android:id="@+id/Spinner12"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:paddingLeft="80dp" />
+	</LinearLayout>
+
+</LinearLayout>

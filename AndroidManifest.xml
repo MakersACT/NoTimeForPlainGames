@@ -22,6 +22,11 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+		<activity
+			android:name="gr.devoid.notimeforplaingames.SelectPlayers"
+			android:label="@string/title_activity_select_players"
+			android:parentActivityName="gr.devoid.notimeforplaingames.NoTimeForPlainGames" >
+		</activity>
 	</application>
 
 </manifest>
