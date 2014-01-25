@@ -15,7 +15,7 @@
 			android:id="@+id/textView1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Enter Players"
+			android:text="@string/enter_players"
 			android:textAppearance="?android:attr/textAppearanceLarge" />
 	</LinearLayout>
 
@@ -30,7 +30,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:paddingRight="200dp"
-			android:text="Name"
+			android:text="@string/player_name"
 			android:textAppearance="?android:attr/textAppearanceMedium" />
 
 		<TextView
@@ -38,7 +38,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:paddingRight="200dp"
-			android:text="Sex"
+			android:text="@string/player_gender"
 			android:textAppearance="?android:attr/textAppearanceMedium" />
 
 		<TextView
@@ -46,7 +46,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:paddingRight="200dp"
-			android:text="Token"
+			android:text="@string/player_token"
 			android:textAppearance="?android:attr/textAppearanceMedium" />
 	</LinearLayout>
 
@@ -71,7 +71,7 @@
 			<EditText
 				android:id="@+id/EditText01"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
@@ -112,7 +112,7 @@
 			<EditText
 				android:id="@+id/EditText02"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
@@ -153,7 +153,7 @@
 			<EditText
 				android:id="@+id/EditText03"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
@@ -194,7 +194,7 @@
 			<EditText
 				android:id="@+id/EditText04"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
@@ -235,7 +235,7 @@
 			<EditText
 				android:id="@+id/EditText05"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
@@ -276,7 +276,7 @@
 			<EditText
 				android:id="@+id/EditText06"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="0dip"
 				android:layout_weight="1"
 				android:ems="10" />
 		</LinearLayout>
