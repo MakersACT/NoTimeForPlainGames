@@ -1,5 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
 	<string name="app_name">No Time for Plain Games</string>
+	<string name="title_activity_no_time_for_plain_games">No Time for Plain Games</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_world">Hello world!</string>
 
 </resources>
