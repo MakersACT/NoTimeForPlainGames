@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -21,38 +22,44 @@ public class NoTimeForPlainGames extends Activity {
 		settings = (ImageView) findViewById(R.id.settings);
 		exit = (ImageView) findViewById(R.id.exit);
 
-		start.setOnClickListener(new View.OnClickListener() {
+		// Using OnTouchListener to catch touch events, in order
+		// to update the image of the button on click and release.
+		start.setOnTouchListener(new View.OnTouchListener() {
 
 			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(".SELECT"));
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					start.setImageResource(R.drawable.start_down);
+					startActivity(new Intent(".SELECT"));
+					return true;
+
+				case MotionEvent.ACTION_UP:
+					start.setImageResource(R.drawable.start);
+					return true;
+				default:
+					return false;
+				}
 			}
 		});
 
-		materials.setOnClickListener(new View.OnClickListener() {
+		exit.setOnTouchListener(new View.OnTouchListener() {
 
 			@Override
-			public void onClick(View v) {
-
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					exit.setImageResource(R.drawable.exit_down);
+					System.exit(0);
+					return true;
+				case MotionEvent.ACTION_UP:
+					exit.setImageResource(R.drawable.exit);
+					return true;
+				default:
+					return false;
+				}
 			}
 		});
-
-		settings.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-
-			}
-		});
-
-		exit.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				System.exit(0);
-			}
-		});
-
 	}
 
 	@Override
