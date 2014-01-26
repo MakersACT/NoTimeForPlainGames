@@ -46,10 +46,10 @@ public class NoTimeForPlainGames extends Activity {
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
 				case MotionEvent.ACTION_DOWN:
-					start.setImageResource(R.drawable.materials_down);
+					materials.setImageResource(R.drawable.materials_down);
 					return true;
 				case MotionEvent.ACTION_UP:
-					start.setImageResource(R.drawable.materials);
+					materials.setImageResource(R.drawable.materials);
 					return true;
 				default:
 					return false;
@@ -62,10 +62,10 @@ public class NoTimeForPlainGames extends Activity {
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
 				case MotionEvent.ACTION_DOWN:
-					start.setImageResource(R.drawable.settings_down);
+					settings.setImageResource(R.drawable.settings_down);
 					return true;
 				case MotionEvent.ACTION_UP:
-					start.setImageResource(R.drawable.settings);
+					settings.setImageResource(R.drawable.settings);
 					return true;
 				default:
 					return false;
