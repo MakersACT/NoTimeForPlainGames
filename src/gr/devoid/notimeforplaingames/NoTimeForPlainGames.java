@@ -14,14 +14,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class NoTimeForPlainGames extends Activity {
-<<<<<<< HEAD
+
 	public final static String NUMBER_OF_PLAYERS = "gr.devoid.notimeforplaingames.NUMBER_OF_PLAYERS";
 	private int numberOfPlayers = 0;
 	private Intent createPlayers;
-	
-=======
 
->>>>>>> 6f7b184642f88e273ad8a8135f5d573f3d0e9d6d
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -94,7 +91,6 @@ public class NoTimeForPlainGames extends Activity {
 					return true;
 				case MotionEvent.ACTION_UP:
 					exit.setImageResource(R.drawable.exit);
-					Log.d("FUCK!", "Exiting...");
 					System.exit(0);
 					return true;
 				default:
@@ -110,35 +106,37 @@ public class NoTimeForPlainGames extends Activity {
 		getMenuInflater().inflate(R.menu.no_time_for_plain_games, menu);
 		return true;
 	}
-	
+
 	public void showDialog() {
 		AlertDialog.Builder playerNum = new AlertDialog.Builder(this);
 		playerNum.setTitle("Number of Players");
 		playerNum.setMessage("Enter the number of players:");
-		
+
 		// Set an EditText view to get user input
 		final EditText input = new EditText(this);
 		input.setInputType(InputType.TYPE_NUMBER_VARIATION_NORMAL);
 		playerNum.setView(input);
-		
-		playerNum.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				numberOfPlayers = Integer.parseInt(input.getText().toString());
-				createPlayers.putExtra(NUMBER_OF_PLAYERS, numberOfPlayers);
-				startActivity(createPlayers);
-			}
-		});
-		
-		playerNum.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				// nothing
-			}
-		});
-		
+
+		playerNum.setPositiveButton("OK",
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						numberOfPlayers = Integer.parseInt(input.getText().toString());
+						createPlayers.putExtra(NUMBER_OF_PLAYERS, numberOfPlayers);
+						startActivity(createPlayers);
+					}
+				});
+
+		playerNum.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// nothing
+					}
+				});
+
 		playerNum.show();
 	}
 }
