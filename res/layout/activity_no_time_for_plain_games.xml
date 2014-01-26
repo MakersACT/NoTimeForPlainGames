@@ -23,6 +23,13 @@
 		android:src="@drawable/materials" />
 
 	<ImageView
+		android:id="@+id/hand"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:src="@drawable/hand" />
+
+		<ImageView
 		android:id="@+id/settings"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

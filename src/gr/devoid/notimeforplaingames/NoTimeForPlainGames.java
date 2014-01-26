@@ -10,16 +10,17 @@ import android.widget.ImageView;
 
 public class NoTimeForPlainGames extends Activity {
 
-	ImageView start, materials, settings, exit;
+	ImageView settings, materials, hand, start, exit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_no_time_for_plain_games);
 
-		start = (ImageView) findViewById(R.id.start);
-		materials = (ImageView) findViewById(R.id.materials);
 		settings = (ImageView) findViewById(R.id.settings);
+		materials = (ImageView) findViewById(R.id.materials);
+		hand = (ImageView) findViewById(R.id.hand);
+		start = (ImageView) findViewById(R.id.start);
 		exit = (ImageView) findViewById(R.id.exit);
 
 		// Using OnTouchListener to catch touch events, in order
