@@ -3,6 +3,7 @@ package gr.devoid.notimeforplaingames;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
@@ -15,8 +16,9 @@ public class CreatePlayersActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_players);
 		
-		// TODO: Get the number of players from a previous activity...
-		int nPlayerNumber = 20;
+		Intent intent = getIntent();
+		int nPlayerNumber = intent.getIntExtra(NoTimeForPlainGames.NUMBER_OF_PLAYERS, 2);
+		
 		final ArrayList<String> playerNumbers = new ArrayList<String>(nPlayerNumber);
 		for (int i = 0; i < nPlayerNumber; i++) {
 			playerNumbers.add(Integer.toString(i + 1));
