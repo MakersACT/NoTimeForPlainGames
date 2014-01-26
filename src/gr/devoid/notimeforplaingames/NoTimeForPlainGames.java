@@ -67,6 +67,7 @@ public class NoTimeForPlainGames extends Activity {
 					return true;
 				case MotionEvent.ACTION_UP:
 					settings.setImageResource(R.drawable.settings);
+					startActivity(new Intent(NoTimeForPlainGames.this, CreatePlayersActivity.class));
 					return true;
 				default:
 					return false;

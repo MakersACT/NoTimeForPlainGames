@@ -1,14 +1,15 @@
 package gr.devoid.notimeforplaingames;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.SimpleAdapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class CreatePlayersActivity extends Activity {
 
-	SimpleAdapter mAdapter;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -16,12 +17,13 @@ public class CreatePlayersActivity extends Activity {
 		
 		// TODO: Get the number of players from a previous activity...
 		int nPlayerNumber = 20;
-		int[] nPlayerId = new int[nPlayerNumber];
+		final ArrayList<String> playerNumbers = new ArrayList<String>(nPlayerNumber);
 		for (int i = 0; i < nPlayerNumber; i++) {
-			nPlayerId[i] = i + 1;
+			playerNumbers.add(Integer.toString(i + 1));
 		}
 		
-		mAdapter = new SimpleAdapter(this, R.layout.create_list_item, R.id.player_number);
+		ListView listview = (ListView) findViewById(R.id.listview);
+		listview.setAdapter(new ArrayAdapter<String>(this, R.layout.create_list_item, R.id.player_number, playerNumbers));
 	}
 
 	@Override
