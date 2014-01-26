@@ -8,32 +8,35 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 public class SelectPlayers extends Activity {
+
+	String[] avatar = { "Alien", "Astronaut", "Diver", "Doctor", "Doll",
+			"Dwarf", "Fairy", "King-Tut", "Knight", "Phoenix", "Samurai",
+			"Superheroine" };
+
+	String[] subs = { "From far away", "The White", "", "The cutest", "",
+			"The Mighty", "Arising from the ashes", "", "The Real Hero" };
+
+	int arr_images[] = { R.drawable.alien, R.drawable.astronaut,
+			R.drawable.diver, R.drawable.doctor, R.drawable.doctor,
+			R.drawable.doll, R.drawable.dwarf, R.drawable.fairy,
+			R.drawable.king, R.drawable.phoenix, R.drawable.samurai,
+			R.drawable.superheroine };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_players);
 
-		final Spinner sex1 = (Spinner) findViewById(R.id.Spinner01);
-		final Spinner sex2 = (Spinner) findViewById(R.id.Spinner03);
-		final Spinner sex3 = (Spinner) findViewById(R.id.Spinner05);
-		final Spinner sex4 = (Spinner) findViewById(R.id.Spinner07);
-		final Spinner sex5 = (Spinner) findViewById(R.id.Spinner09);
+		Spinner a1 = (Spinner) findViewById(R.id.Spinner02);
+		Spinner a2 = (Spinner) findViewById(R.id.Spinner04);
+		Spinner a3 = (Spinner) findViewById(R.id.Spinner06);
+		Spinner a4 = (Spinner) findViewById(R.id.Spinner08);
+		Spinner a5 = (Spinner) findViewById(R.id.Spinner10);
 
-		List<String> list = new ArrayList<String>();
-		list.add("Male");
-		list.add("Female");
-
-		ArrayAdapter<String> dataAd = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, list);
-		dataAd.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		sex1.setAdapter(dataAd);
-		sex2.setAdapter(dataAd);
-		sex3.setAdapter(dataAd);
-		sex4.setAdapter(dataAd);
-		sex5.setAdapter(dataAd);
+		
 	}
 
 	@Override
