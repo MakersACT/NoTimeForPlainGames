@@ -10,14 +10,14 @@ import android.widget.ImageView;
 
 public class NoTimeForPlainGames extends Activity {
 
-	ImageView settings, materials, hand, start, exit;
+	ImageView materials, hand, start, exit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_no_time_for_plain_games);
 
-		settings = (ImageView) findViewById(R.id.settings);
+		final ImageView settings = (ImageView) findViewById(R.id.settings);
 		materials = (ImageView) findViewById(R.id.materials);
 		hand = (ImageView) findViewById(R.id.hand);
 		start = (ImageView) findViewById(R.id.start);
