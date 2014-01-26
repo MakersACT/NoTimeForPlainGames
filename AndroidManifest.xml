@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="gr.devoid.notimeforplaingames"
@@ -48,4 +49,44 @@
         </activity>
     </application>
 
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gr.devoid.notimeforplaingames"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="gr.devoid.notimeforplaingames.NoTimeForPlainGames"
+            android:label="@string/title_activity_no_time_for_plain_games" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gr.devoid.notimeforplaingames.SelectPlayers"
+            android:label="@string/title_activity_select_players" >
+        </activity>
+        <activity
+            android:name="gr.devoid.notimeforplaingames.CreatePlayersActivity"
+            android:label="@string/title_activity_create_players" >
+        </activity>
+        <activity
+            android:name="gr.devoid.notimeforplaingames.AvatarSelectActivity"
+            android:label="@string/title_activity_avatar_select" >
+        </activity>
+    </application>
+
+>>>>>>> 6f7b184642f88e273ad8a8135f5d573f3d0e9d6d
 </manifest>

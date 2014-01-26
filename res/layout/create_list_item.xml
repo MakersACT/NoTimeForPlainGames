@@ -6,12 +6,14 @@
 
 	<TextView
 		android:id="@+id/player_number"
+		android:textColor="#FFFFFF"
 		android:layout_width="0dip"
 		android:layout_height="match_parent"
 		android:layout_weight="1" />
 
 	<EditText
 		android:id="@+id/player_name"
+		android:textColor="#FFFFFF"
 		android:layout_width="0dip"
 		android:layout_height="match_parent"
 		android:layout_weight="3"

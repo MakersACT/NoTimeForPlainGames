@@ -14,10 +14,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 public class NoTimeForPlainGames extends Activity {
+<<<<<<< HEAD
 	public final static String NUMBER_OF_PLAYERS = "gr.devoid.notimeforplaingames.NUMBER_OF_PLAYERS";
 	private int numberOfPlayers = 0;
 	private Intent createPlayers;
 	
+=======
+
+>>>>>>> 6f7b184642f88e273ad8a8135f5d573f3d0e9d6d
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,7 +29,6 @@ public class NoTimeForPlainGames extends Activity {
 
 		final ImageView settings = (ImageView) findViewById(R.id.settings);
 		final ImageView materials = (ImageView) findViewById(R.id.materials);
-		final ImageView hand = (ImageView) findViewById(R.id.hand);
 		final ImageView start = (ImageView) findViewById(R.id.start);
 		final ImageView exit = (ImageView) findViewById(R.id.exit);
 
@@ -58,6 +61,7 @@ public class NoTimeForPlainGames extends Activity {
 					return true;
 				case MotionEvent.ACTION_UP:
 					materials.setImageResource(R.drawable.materials);
+					startActivity(new Intent(NoTimeForPlainGames.this, AvatarSelectActivity.class));
 					return true;
 				default:
 					return false;
