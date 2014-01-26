@@ -18,24 +18,54 @@ public class NoTimeForPlainGames extends Activity {
 		setContentView(R.layout.activity_no_time_for_plain_games);
 
 		start = (ImageView) findViewById(R.id.start);
-		materials = (ImageView) findViewById(R.id.matterials);
+		materials = (ImageView) findViewById(R.id.materials);
 		settings = (ImageView) findViewById(R.id.settings);
 		exit = (ImageView) findViewById(R.id.exit);
 
 		// Using OnTouchListener to catch touch events, in order
 		// to update the image of the button on click and release.
 		start.setOnTouchListener(new View.OnTouchListener() {
-
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {
 				case MotionEvent.ACTION_DOWN:
 					start.setImageResource(R.drawable.start_down);
-					startActivity(new Intent(NoTimeForPlainGames.this, SelectPlayers.class));
 					return true;
-
 				case MotionEvent.ACTION_UP:
 					start.setImageResource(R.drawable.start);
+					startActivity(new Intent(NoTimeForPlainGames.this, SelectPlayers.class));
+					return true;
+				default:
+					return false;
+				}
+			}
+		});
+
+		materials.setOnTouchListener(new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					start.setImageResource(R.drawable.materials_down);
+					return true;
+				case MotionEvent.ACTION_UP:
+					start.setImageResource(R.drawable.materials);
+					return true;
+				default:
+					return false;
+				}
+			}
+		});
+
+		settings.setOnTouchListener(new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					start.setImageResource(R.drawable.settings_down);
+					return true;
+				case MotionEvent.ACTION_UP:
+					start.setImageResource(R.drawable.settings);
 					return true;
 				default:
 					return false;
@@ -44,7 +74,6 @@ public class NoTimeForPlainGames extends Activity {
 		});
 
 		exit.setOnTouchListener(new View.OnTouchListener() {
-
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				switch (event.getAction()) {

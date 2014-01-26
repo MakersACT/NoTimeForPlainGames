@@ -19,13 +19,13 @@
         android:src="@drawable/start" />
 
     <ImageView
-        android:id="@+id/matterials"
+        android:id="@+id/materials"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/start"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="93dp"
-        android:src="@drawable/settings" />
+        android:src="@drawable/materials" />
 
     <ImageView
         android:id="@+id/settings"
@@ -34,14 +34,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/start"
         android:layout_marginRight="75dp"
-        android:src="@drawable/materials" />
+        android:src="@drawable/settings" />
 
     <ImageView
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/settings"
-        android:layout_alignTop="@+id/matterials"
+        android:layout_alignTop="@+id/materials"
         android:src="@drawable/exit" />
 
 </RelativeLayout>
