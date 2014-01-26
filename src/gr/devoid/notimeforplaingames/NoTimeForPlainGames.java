@@ -31,7 +31,7 @@ public class NoTimeForPlainGames extends Activity {
 				switch (event.getAction()) {
 				case MotionEvent.ACTION_DOWN:
 					start.setImageResource(R.drawable.start_down);
-					startActivity(new Intent(".SELECT"));
+					startActivity(new Intent(NoTimeForPlainGames.this, SelectPlayers.class));
 					return true;
 
 				case MotionEvent.ACTION_UP:
@@ -50,10 +50,10 @@ public class NoTimeForPlainGames extends Activity {
 				switch (event.getAction()) {
 				case MotionEvent.ACTION_DOWN:
 					exit.setImageResource(R.drawable.exit_down);
-					System.exit(0);
 					return true;
 				case MotionEvent.ACTION_UP:
 					exit.setImageResource(R.drawable.exit);
+					System.exit(0);
 					return true;
 				default:
 					return false;

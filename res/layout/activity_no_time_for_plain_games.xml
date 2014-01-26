@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginLeft="75dip"
+        android:layout_marginTop="57dip"
         android:src="@drawable/start" />
 
     <ImageView
