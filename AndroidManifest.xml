@@ -26,6 +26,10 @@
 			android:name="gr.devoid.notimeforplaingames.SelectPlayers"
 			android:label="@string/title_activity_select_players" >
 		</activity>
+		<activity
+			android:name="gr.devoid.notimeforplaingames.CreatePlayersActivity"
+			android:label="@string/title_activity_create_players" >
+		</activity>
 	</application>
 
 </manifest>
