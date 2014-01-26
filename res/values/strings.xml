@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="app_name">No Time for Plain Games</string>
-	<string name="title_activity_no_time_for_plain_games">No Time for Plain Games</string>
-	<string name="action_settings">Settings</string>
-	<string name="hello_world">Hello world!</string>
-	<string name="title_activity_select_players">Select Players</string>
+    <string name="app_name">No Time for Plain Games</string>
+    <string name="title_activity_no_time_for_plain_games">No Time for Plain Games</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_select_players">Select Players</string>
 
-	<!-- SelectPlayers strings -->
-	<string name="enter_players">Enter Players</string>
-	<string name="player_name">Name</string>
-	<string name="player_gender">Gender</string>
-	<string name="player_token">Token</string>
-	<string name="title_activity_create_players">Create Players</string>
+    <!-- SelectPlayers strings -->
+    <string name="enter_players">Enter Players</string>
+    <string name="player_name">Name</string>
+    <string name="player_gender">Gender</string>
+    <string name="player_token">Token</string>
+    <string name="title_activity_create_players">Create Players</string>
+    <string name="title_activity_singing">Singing</string>
+    <string name="title_activity_drawing">Drawing</string>
+    <string name="title_activity_dancing">Dancing</string>
+    <string name="title_activity_game_select">GameSelect</string>
 
 </resources>
