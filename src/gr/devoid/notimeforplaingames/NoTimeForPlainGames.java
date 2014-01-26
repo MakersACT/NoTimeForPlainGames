@@ -1,22 +1,22 @@
 package gr.devoid.notimeforplaingames;
 
 import android.app.Activity;
-import android.app.Dialog;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.NumberPicker;
-import android.widget.NumberPicker.OnValueChangeListener;
 
-public class NoTimeForPlainGames extends Activity implements OnValueChangeListener {
+public class NoTimeForPlainGames extends Activity {
 	public final static String NUMBER_OF_PLAYERS = "gr.devoid.notimeforplaingames.NUMBER_OF_PLAYERS";
 	private int numberOfPlayers = 0;
+	private Intent createPlayers;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +40,8 @@ public class NoTimeForPlainGames extends Activity implements OnValueChangeListen
 					return true;
 				case MotionEvent.ACTION_UP:
 					start.setImageResource(R.drawable.start);
+					createPlayers = new Intent(NoTimeForPlainGames.this, CreatePlayersActivity.class);
 					showDialog();
-					Intent createPlayers = new Intent(NoTimeForPlainGames.this, CreatePlayersActivity.class);
-					createPlayers.putExtra(NUMBER_OF_PLAYERS, numberOfPlayers);
-					startActivity(createPlayers);
 					return true;
 				default:
 					return false;
@@ -92,6 +90,7 @@ public class NoTimeForPlainGames extends Activity implements OnValueChangeListen
 					return true;
 				case MotionEvent.ACTION_UP:
 					exit.setImageResource(R.drawable.exit);
+					Log.d("FUCK!", "Exiting...");
 					System.exit(0);
 					return true;
 				default:
@@ -107,40 +106,35 @@ public class NoTimeForPlainGames extends Activity implements OnValueChangeListen
 		getMenuInflater().inflate(R.menu.no_time_for_plain_games, menu);
 		return true;
 	}
-
-	@Override
-	public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-		Log.i("gr.devoid.notimeforplaingames", "Value is :" + newVal);
-	}
 	
 	public void showDialog() {
-		final Dialog pickNumberDialog = new Dialog(NoTimeForPlainGames.this);
-		pickNumberDialog.setTitle("Number of Players");
-		pickNumberDialog.setContentView(R.layout.pick_number_dialog);
-		Button setButton = (Button) findViewById(R.id.player_picker_set);
-		Button cancelButton = (Button) findViewById(R.id.player_picker_cancel);
-		final NumberPicker pickNumber = (NumberPicker) pickNumberDialog.findViewById(R.id.player_number_picker);
+		AlertDialog.Builder playerNum = new AlertDialog.Builder(this);
+		playerNum.setTitle("Number of Players");
+		playerNum.setMessage("Enter the number of players:");
 		
-		pickNumber.setMaxValue(15);
-		pickNumber.setMinValue(2);
-		pickNumber.setWrapSelectorWheel(false);
-		pickNumber.setOnValueChangedListener(this);
+		// Set an EditText view to get user input
+		final EditText input = new EditText(this);
+		input.setInputType(InputType.TYPE_NUMBER_VARIATION_NORMAL);
+		playerNum.setView(input);
 		
-		setButton.setOnClickListener(new OnClickListener() {
+		playerNum.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			
 			@Override
-			public void onClick(View v) {
-				numberOfPlayers = pickNumber.getValue();
-				pickNumberDialog.dismiss();
+			public void onClick(DialogInterface dialog, int which) {
+				numberOfPlayers = Integer.parseInt(input.getText().toString());
+				createPlayers.putExtra(NUMBER_OF_PLAYERS, numberOfPlayers);
+				startActivity(createPlayers);
 			}
 		});
 		
-		cancelButton.setOnClickListener(new OnClickListener() {
+		playerNum.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			
 			@Override
-			public void onClick(View v) {
-				pickNumberDialog.dismiss();
+			public void onClick(DialogInterface dialog, int which) {
+				// nothing
 			}
 		});
 		
-		pickNumberDialog.show();
+		playerNum.show();
 	}
 }
