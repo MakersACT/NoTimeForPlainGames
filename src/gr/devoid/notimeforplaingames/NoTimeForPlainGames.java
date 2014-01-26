@@ -18,10 +18,10 @@ public class NoTimeForPlainGames extends Activity {
 		setContentView(R.layout.activity_no_time_for_plain_games);
 
 		final ImageView settings = (ImageView) findViewById(R.id.settings);
-		materials = (ImageView) findViewById(R.id.materials);
-		hand = (ImageView) findViewById(R.id.hand);
-		start = (ImageView) findViewById(R.id.start);
-		exit = (ImageView) findViewById(R.id.exit);
+		final ImageView materials = (ImageView) findViewById(R.id.materials);
+		final ImageView hand = (ImageView) findViewById(R.id.hand);
+		final ImageView start = (ImageView) findViewById(R.id.start);
+		final ImageView exit = (ImageView) findViewById(R.id.exit);
 
 		// Using OnTouchListener to catch touch events, in order
 		// to update the image of the button on click and release.
