@@ -3,10 +3,12 @@ package gr.devoid.notimeforplaingames;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
+import android.widget.SimpleAdapter;
 
 public class CreatePlayersActivity extends Activity {
 
+	SimpleAdapter mAdapter;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -19,7 +21,7 @@ public class CreatePlayersActivity extends Activity {
 			nPlayerId[i] = i + 1;
 		}
 		
-		
+		mAdapter = new SimpleAdapter(this, R.layout.create_list_item, R.id.player_number);
 	}
 
 	@Override
