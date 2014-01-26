@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,8 +12,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.NumberPicker.OnValueChangeListener;
 
-public class NoTimeForPlainGames extends Activity {
+public class NoTimeForPlainGames extends Activity implements OnValueChangeListener {
 	public final static String NUMBER_OF_PLAYERS = "gr.devoid.notimeforplaingames.NUMBER_OF_PLAYERS";
 	private int numberOfPlayers = 0;
 	
@@ -106,6 +108,11 @@ public class NoTimeForPlainGames extends Activity {
 		return true;
 	}
 
+	@Override
+	public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+		Log.i("gr.devoid.notimeforplaingames", "Value is :" + newVal);
+	}
+	
 	public void showDialog() {
 		final Dialog pickNumberDialog = new Dialog(NoTimeForPlainGames.this);
 		pickNumberDialog.setTitle("Number of Players");
@@ -116,7 +123,8 @@ public class NoTimeForPlainGames extends Activity {
 		
 		pickNumber.setMaxValue(15);
 		pickNumber.setMinValue(2);
-		pickNumber.setWrapSelectorWheel(true);
+		pickNumber.setWrapSelectorWheel(false);
+		pickNumber.setOnValueChangedListener(this);
 		
 		setButton.setOnClickListener(new OnClickListener() {
 			@Override
@@ -132,5 +140,7 @@ public class NoTimeForPlainGames extends Activity {
 				pickNumberDialog.dismiss();
 			}
 		});
+		
+		pickNumberDialog.show();
 	}
 }
