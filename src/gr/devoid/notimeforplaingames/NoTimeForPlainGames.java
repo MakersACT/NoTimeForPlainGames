@@ -10,8 +10,6 @@ import android.widget.ImageView;
 
 public class NoTimeForPlainGames extends Activity {
 
-	ImageView materials, hand, start, exit;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -19,7 +17,6 @@ public class NoTimeForPlainGames extends Activity {
 
 		final ImageView settings = (ImageView) findViewById(R.id.settings);
 		final ImageView materials = (ImageView) findViewById(R.id.materials);
-		final ImageView hand = (ImageView) findViewById(R.id.hand);
 		final ImageView start = (ImageView) findViewById(R.id.start);
 		final ImageView exit = (ImageView) findViewById(R.id.exit);
 
@@ -51,6 +48,7 @@ public class NoTimeForPlainGames extends Activity {
 					return true;
 				case MotionEvent.ACTION_UP:
 					materials.setImageResource(R.drawable.materials);
+					startActivity(new Intent(NoTimeForPlainGames.this, AvatarSelectActivity.class));
 					return true;
 				default:
 					return false;
