@@ -1,4 +1,4 @@
 NoTimeForPlainGames
 ===================
 
-GGJ Thessaloniki
+GGJ Thessaloniki 2014
