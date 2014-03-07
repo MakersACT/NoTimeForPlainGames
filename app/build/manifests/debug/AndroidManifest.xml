@@ -1,0 +1,28 @@
+<!-- From: file:/Users/proteus/Projects/Android/NoTimeForPlainGames/app/src/main/AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="gr.devoid.notimeforplaingames">
+
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="18"/>
+
+	<application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+		<activity android:label="@string/title_activity_no_time_for_plain_games" android:name="gr.devoid.notimeforplaingames.NoTimeForPlainGames">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/title_activity_select_players" android:name="gr.devoid.notimeforplaingames.SelectPlayers">
+		</activity>
+		<activity android:label="@string/title_activity_create_players" android:name="gr.devoid.notimeforplaingames.CreatePlayersActivity">
+		</activity>
+		<activity android:label="@string/title_activity_singing" android:name="gr.devoid.notimeforplaingames.Singing">
+		</activity>
+		<activity android:label="@string/title_activity_drawing" android:name="gr.devoid.notimeforplaingames.Drawing">
+		</activity>
+		<activity android:label="@string/title_activity_dancing" android:name="gr.devoid.notimeforplaingames.Dancing">
+		</activity>
+		<activity android:label="@string/title_activity_game_select" android:name="gr.devoid.notimeforplaingames.GameSelect">
+		</activity>
+	</application>
+
+</manifest>
